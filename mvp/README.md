@@ -23,6 +23,6 @@ that will run a different bash script.
 4) Run the sample image to spin up a container, observe what is happening
 
 ```bash
-$ docker build -f Dockerfile2 -t mvp ./
-$ docker run mvp
+$ docker build -f Dockerfile2 -t mvp2 ./
+$ docker run mvp2
 ```
