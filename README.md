@@ -1,7 +1,9 @@
 # docker-basics
 
 Included in this repo are a variety of folders that will show you "how" docker works as well as
-some brief setup guides to test and have a play with your own mini-sandbox environment
+some brief setup guides to test and have a play with your own mini-sandbox environment.
+
+A non-exhaustive list of all the Dockerfile syntax commands is contained in the `SYNTAX.md` file
 
 ## Types of training
 
