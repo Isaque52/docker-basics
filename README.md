@@ -10,5 +10,5 @@ some brief setup guides to test and have a play with your own mini-sandbox envir
 This will instantiate your own version of a "hello world" style docker environment. Here we will
 create our own docker image, using `Dockerfile` and then run it using some commands.
 
-Because this is designed to be a true MVP, there will be no direct inheritance (Which is not that
-common), and as such we will have little to no ability to perform tasks.
+Whilst this is designed to be an MVP, there will be some direct inheritance (Which is quite common),
+and in most projects will inherit from a base programming language such as ruby.
