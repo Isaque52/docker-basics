@@ -47,4 +47,4 @@ Again make sure we can check and verify this has been done. (NB: There is a quic
 Do this **without** editing the 1st `Dockerfile`
 
 Once you have done all this, take a break. This completes the mvp exercise. The next exercise to
-look into is optimisation
+look into is optimisation.
