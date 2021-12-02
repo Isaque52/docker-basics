@@ -45,3 +45,6 @@ this has been done correctly
 Again make sure we can check and verify this has been done. (NB: There is a quick way to do this)
 3) Run the 2nd Docker container that you made, but run the 1st shell script (`hello.sh`).
 Do this **without** editing the 1st `Dockerfile`
+
+Once you have done all this, take a break. This completes the mvp exercise. The next exercise to
+look into is optimisation
