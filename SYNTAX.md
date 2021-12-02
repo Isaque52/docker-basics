@@ -2,7 +2,8 @@
 
 Each line in a Dockerfile is prefixed with a command keyword and then has a method signature
 
-Below is a non-exhaustive list of the command keywords and what they do
+Below is a **non-exhaustive** list of the command keywords and what they do. For a full list
+consult the official docker docs site
 
 `FROM` - Use this command followed by a link to the reference base image you wish to use
 
