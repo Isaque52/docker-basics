@@ -35,16 +35,42 @@ into the container
 4) Re-build your docker image
 5) Re-run your container and observe it all works
 
+Once this all runs and does what you expect lets now start analysing our docker images and finding
+out more information about them.
 
-## DONE UP TO HERE ## 
-Once we have done all of this I want you to optimise the 2nd Dockerfile again
+To start with run the following commands. Observing the output at each stage and discussing what
+each item means
 
-1) Copy all files from our host to the image. Find a way of launching docker so you can "check"
-this has been done correctly
-2) Copy all files from our host to the image **except** documentation files that end in `.md`.
-Again make sure we can check and verify this has been done. (NB: There is a quick way to do this)
-3) Run the 2nd Docker container that you made, but run the 1st shell script (`hello.sh`).
-Do this **without** editing the 1st `Dockerfile`
+```bash
+$ docker images
+$ docker ps
+$ docker system df
+$ docker help
+# This next command will require input from the user after submission
+$ docker system prune
+```
 
-Once you have done all this, take a break. This completes the mvp exercise. The next exercise to
-look into is optimisation
+After we have ran these commands and discussed. We can then discuss how to optimise our build.
+
+To begin with we have little to no additional items installed onto our docker image, so lets begin
+by adding a few more things
+
+1) Add `curl`, `gcc` and `build-essential` as packages to your docker build
+2) Install bundler as a gem (Provide a specific version)
+3) Check your new image size (It should be bigger)
+
+Now we have began to start experimenting with adding things, it makes sense to also start looking
+into removing things (i.e. making things more optimal, hence the mini-project name).
+
+To begin with reduce down the fat ruby 2.7 build to an alpine build, by adding `-alpine` at the end
+of the `FROM` reference
+
+Try to re-build the image. You'll notice some things will start going wrong. Again discuss what the
+problem/s might be, and how you could fix them?
+
+To finish on, attempt to fix the existing Dockerfile by creating an alpine version of the same
+Dockerfile, give it a different name (i.e. `Dockerfile-alpine`), and then try to build this version
+of the container.
+
+Once you have done this, compare the size of the two different containers (Fat vs Thin), and then
+realise when Devops asks you to use alpine containers how much space you could save.
