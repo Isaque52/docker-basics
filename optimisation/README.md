@@ -62,15 +62,16 @@ by adding a few more things
 Now we have began to start experimenting with adding things, it makes sense to also start looking
 into removing things (i.e. making things more optimal, hence the mini-project name).
 
-To begin with reduce down the fat ruby 2.7 build to an alpine build, by adding `-alpine` at the end
-of the `FROM` reference
+To begin with reduce down the fat ruby 2.7 build to an alpine build. Let's create a new Dockerfile
+called `Dockerfile-alpine` and make the reference image an alpine one by adding `-alpine` at the end
+of the `FROM` reference.
 
-Try to re-build the image. You'll notice some things will start going wrong. Again discuss what the
-problem/s might be, and how you could fix them?
+Add in the previous packages as done in the regular build process, then try to build the image.
+You'll notice some things will start going wrong. Discuss what the problem/s might be, and how
+you could fix them / stop them from occurring in the first place.
 
-To finish on, attempt to fix the existing Dockerfile by creating an alpine version of the same
-Dockerfile, give it a different name (i.e. `Dockerfile-alpine`), and then try to build this version
-of the container.
+To finish on, attempt to fix the alpine Dockerfile by using some new syntax to add the desired packages
+(NB: You'll need to alter the packages proper).
 
 Once you have done this, compare the size of the two different containers (Fat vs Thin), and then
 realise when Devops asks you to use alpine containers how much space you could save.
