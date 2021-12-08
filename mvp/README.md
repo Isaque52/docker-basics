@@ -33,15 +33,15 @@ things a little bit more dynamic. Through researching lets see how we can do the
 1) Set an environment variable inside the `Dockerfile`
 2) Set an environment variable at runtime (Check the docs for the short-hand flag for this)
 3) Set an environment variable both inside the `Dockerfile` and at runtime. Which takes precedence?
-4) Tell Docker to expect an environment variable, but don't define it. When running the container
+4) Tell Docker to expect an environment variable, but **don't define it**. When running the container
 what value does the environment variable equal?
-5) Globally expose an environment variable on your host OS, then Tell Docker to expect an environment
-variable, and don't define it. What does it now equal?
+5) Globally expose an environment variable on your host OS (Google this if you're not sure how to),
+then Tell Docker to expect an environment variable, and don't define it. What does it now equal?
 
 Once we have done all of this I want you to optimise the 2nd `Dockerfile` again
 
 1) Copy all files from our host to the image. Find a way of "checking" this has been done correctly
-(There is more than one way to do this)
+(There is more than one way to do this, google if you're unsure of the options)
 2) Copy all files from our host to the image **except** documentation files that end in `.md`.
 Again make sure we can check and verify this has been done. (NB: There is an easy way to do this)
 3) Run the 2nd Docker container that you made, but run the 1st shell script (`hello.sh`).
