@@ -1,0 +1,17 @@
+# We need to inherit from something that provides us with a basic running environment
+FROM ruby:2.7
+
+# We want to copy a file. This syntax allows us to copy a file from our host pc to our destination docker image
+# We are specifying it in the same way as bash would be specified
+# So it is specified as COPY {host-file} {destination}
+COPY . /
+
+# This runs the command specified. You pass in the command as an array, with each argument as a portion of the command
+# to be executed. You can also pass in the command as a direct full string which we will do below
+
+
+# Execute the command again but using direct string representation
+CMD "./New.sh"
+
+ENV animal = "dog"
+
